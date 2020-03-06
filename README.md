@@ -18,7 +18,7 @@ alias_path: /path/to/alias
 override_zshrc: false
 # [boolean] Same as zshrc but with the alias file
 override_aliases: false
-# The name of the zsh theme to use [see other themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
+# The name of the zsh theme to use
 zsh_theme: gentoo
 # [list] The list of zsh / oh-my-zsh themes to use
 plugin_list:
@@ -33,6 +33,7 @@ custom_paths:
 CUSTOM=/custom/path/to/add
 export PATH=$PATH:$CUSTOM
 ```
+You can find other zsh themes [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
 
 ## Howto use this role
 
