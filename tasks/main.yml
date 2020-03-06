@@ -7,9 +7,11 @@
 - name: "Fill zshrc configuration file"
   include: fill_zshrc.yml
   when: not override_zshrc
+
 - name: "Override aliases file configuration with template"
   include: override_aliases.yml
-  when: override_aliases=
+  when: override_aliases
+
 - name: "Fill aliases file configuration"
   include: fill_aliases.yml
-  when: not override_aliases=
+  when: not override_aliases

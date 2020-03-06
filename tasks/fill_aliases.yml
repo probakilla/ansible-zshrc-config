@@ -1,8 +1,8 @@
 ---
 
 - name: "Insert aliases in aliases file"
-  lineinfile:
+  blockinfile:
     dest: "{{ alias_path }}"
     insertafter: "^ Custom alias file$"
-    line: "{{ item }}"
-  loop: "{{ alias_list }}"
+    marker: "# ANSIBLE - ALIAS LIST {mark}"
+    block: "{{ alias_list }}"

@@ -1,15 +1,15 @@
 ---
 
-- name: "Inserting plugins in zshrc file"
-  lineinfile:
+- name: "Inserting plugins in {{ zshrc_path }}"
+  blockinfile:
     dest: "{{ zshrc_path }}"
     insertafter: "^plugins=.*"
-    line: "{{ item }}"
-  loop: "{{ plugins_list }}"
+    marker: "# ANSIBLE - OH MY ZSH PLUGIN LIST {mark}"
+    block: "{{ plugins_list }}"
 
-- name: "Inserting custom paths in zshrc file"
-  lineinfile:
+- name: "Inserting custom paths in {{ zshrc_path }}"
+  blockinfile:
     dest: "{{ zshrc_path }}"
     insertafter: "^# Custom paths$"
-    line: "{{ item }}"
-  loop: "{{ custom_paths }}"
+    marker: "# ANSIBLE - ZSH CUSTOM PATHS {mark}"
+    block: "{{ alias_list }}"
