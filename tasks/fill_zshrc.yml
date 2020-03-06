@@ -1,0 +1,15 @@
+---
+
+- name: "Inserting plugins in zshrc file"
+  lineinfile:
+    dest: "{{ zshrc_path }}"
+    insertafter: "^plugins=.*"
+    line: "{{ item }}"
+  loop: "{{ plugins_list }}"
+
+- name: "Inserting custom paths in zshrc file"
+  lineinfile:
+    dest: "{{ zshrc_path }}"
+    insertafter: "^# Custom paths$"
+    line: "{{ item }}"
+  loop: "{{ custom_paths }}"

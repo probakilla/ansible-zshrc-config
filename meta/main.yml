@@ -1,0 +1,24 @@
+galaxy_info:
+  author: Probakilla
+  role_name: zshrc-config
+  description: Improve the default configuration for zsh
+
+  license: GPLv3
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Debian
+    versions:
+    - all
+
+  galaxy_tags:
+    - probakilla
+    - debian
+    - shell
+    - zsh
+    - configuration
+    - aliases
+
+dependencies:
+  - src: probakilla.apt_install

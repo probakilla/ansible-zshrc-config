@@ -1,0 +1,9 @@
+---
+
+- name: "Install alias file"
+  template:
+    src: aliases.j2
+    dest: "{{ alias_path }}"
+    follow: yes
+
+- include: fill_aliases.yml

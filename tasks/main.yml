@@ -1,0 +1,19 @@
+---
+
+- name: "Override zshrc configuration with template"
+  include: override_zshrc.yml
+  when: (override_zshrc == true)
+
+- name: "Fill zshrc configuration file"
+  include: fill_zshrc.yml
+  when: (override_zshrc == false)
+
+- name: "Override aliases file configuration with template"
+  include: override_aliases.yml
+  when: (override_aliases == true)
+
+- name: "Fill aliases file configuration"
+  include: fill_aliases.yml
+  when: (override_aliases == false)
+
+

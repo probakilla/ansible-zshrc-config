@@ -1,0 +1,8 @@
+---
+
+- name: "Insert aliases in aliases file"
+  lineinfile:
+    dest: "{{ alias_path }}"
+    insertafter: "^ Custom alias file$"
+    line: "{{ item }}"
+  loop: "{{ alias_list }}"

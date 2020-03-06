@@ -1,0 +1,40 @@
+# File paths
+zshrc_path: $HOME/.zshrc
+alias_path: $HOME/.aliases
+
+# Override booleans
+override_aliases: false
+override_zshrc: false
+
+# zshrc content variables
+zsh_theme: gentoo
+plugins_list:
+  - "  git"
+  - "  zsh-syntax-highlighting"
+  - "  zsh-autosuggestions"
+  - "  colored-man-pages"
+  - "  colorize"
+  - "  command-not-found"
+  - "  copydir"
+  - "  copyfile"
+  - "  cp"
+  - "  vi-mode"
+  - "  gitignore"
+  - "  pip"
+  - "  virtualenv"
+  - "  lol"
+  - "  extract"
+  - "  vundle"
+  - "  history"
+
+alias_list:
+  - alias src="source ~/.zshrc"
+  - alias python="python3.7"
+  - alias pip="pip3"
+  - alias zshcfg="vim ~/.zshrc"
+  - alias vimcfg="vim /etc/vim/vimrc"
+  - alias aliases="vim ~/.aliases"
+
+custom_paths:
+  - HOME_BIN=$HOME/bin
+  - export PATH=$PATH:$HOME_BIN
