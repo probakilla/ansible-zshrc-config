@@ -15,5 +15,3 @@
 - name: "Fill aliases file configuration"
   include: fill_aliases.yml
   when: (override_aliases == false)
-
-
