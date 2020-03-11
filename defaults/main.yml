@@ -35,6 +35,6 @@ alias_list: |
   alias vimcfg="vim ~/.vimrc"
   alias aliases="vim ~/.aliases"
 
-custom_paths:
-  - HOME_BIN=$HOME/bin
-  - export PATH=$PATH:$HOME_BIN
+custom_paths: |
+  HOME_BIN=$HOME/bin
+  export PATH=$PATH:$HOME_BIN
