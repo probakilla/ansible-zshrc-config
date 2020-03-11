@@ -12,4 +12,4 @@
     dest: "{{ zshrc_path }}"
     insertafter: "^# Custom paths$"
     marker: "# ANSIBLE - ZSH CUSTOM PATHS {mark}"
-    block: "{{ alias_list }}"
+    block: "{{ custom_paths }}"
