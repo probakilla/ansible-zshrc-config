@@ -18,7 +18,6 @@ plugins_list: |
     copydir
     copyfile
     cp
-    vi-mode
     gitignore
     pip
     virtualenv
