@@ -1,5 +1,6 @@
 # File paths
 zshrc_path: $HOME/.zshrc
+vimrc_path: $HOME/.vimrc
 alias_path: $HOME/.aliases
 
 # Override booleans
@@ -27,12 +28,13 @@ plugins_list: |
     history
 
 alias_list: |
-  alias src="source ~/.zshrc"
+  alias src="source {{zshrc_path}}"
   alias python="python3.7"
   alias pip="pip3"
-  alias zshcfg="vim ~/.zshrc"
-  alias vimcfg="vim ~/.vimrc"
+  alias zshcfg="vim {{zshrc_path}}"
+  alias vimcfg="vim {{vimrc_path}}"
   alias aliases="vim ~/.aliases"
+  alias vim="nvim -u {{vimrc_path}}"
 
 custom_paths: |
   HOME_BIN=$HOME/bin
