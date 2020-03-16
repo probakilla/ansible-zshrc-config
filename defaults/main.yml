@@ -39,3 +39,12 @@ alias_list: |
 custom_paths: |
   HOME_BIN=$HOME/bin
   export PATH=$PATH:$HOME_BIN
+  #
+  # LS_COLORS for wsl
+  if uname -r | grep -q 'Microsoft'; then
+      LS_COLORS='ow01;34;40'
+      export LS_COLORS
+  fi
+  #
+  # Display the distibution informations
+  screenfetch
